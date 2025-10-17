@@ -1,0 +1,465 @@
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    });
+
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+    });
+const productos = [
+{
+    "id_producto": 1,
+    "nombre": "Monitor Curvo Samsung Odyssey G5 27\"",
+    "modelo": "Odyssey G5 (C27G55T)",
+    "marca": "Samsung",
+    "descripcion": "Monitor Gaming Curvo 1000R de 27 pulgadas, resolución WQHD (2560x1440), 144Hz, 1ms, FreeSync Premium. Tecnología de panel VA.",
+    "color": "NEGRO",
+    "precio": 1870.44,
+    "stock": 15,
+    "valor": 0,
+    "imagen": "/images/monitor-1",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 2,
+    "nombre": "Monitor Gaming LG UltraGear 27\"",
+    "modelo": "27GN800-B",
+    "marca": "LG",
+    "descripcion": "Monitor Gaming de 27 pulgadas, Panel IPS, resolución QHD (2560x1440), 144Hz, 1ms (GtG), compatible con NVIDIA G-Sync y AMD FreeSync Premium, HDR10.",
+    "color": "NEGRO/ROJO",
+    "precio": 2497.44,
+    "stock": 20,
+    "valor": 0,
+    "imagen": "/images/monitor-2",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 3,
+    "nombre": "Monitor Dell UltraSharp 27 4K USB-C Hub",
+    "modelo": "U2723QE",
+    "marca": "Dell",
+    "descripcion": "Monitor de 27 pulgadas, resolución 4K UHD (3840x2160), 60Hz, Panel IPS Black, con concentrador USB-C que ofrece hasta 90W Power Delivery.",
+    "color": "PLATEADO/NEGRO",
+    "precio": 4621.57,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/monitor-3",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 4,
+    "nombre": "Monitor Profesional ASUS ProArt Display 32\"",
+    "modelo": "PA32UCXR",
+    "marca": "ASUS",
+    "descripcion": "Monitor profesional Mini LED de 32 pulgadas, 4K UHD, 1600 nits de brillo máximo, 2304 zonas de atenuación local, 97% DCI-P3, puertos Thunderbolt 4.",
+    "color": "NEGRO",
+    "precio": 24360.00,
+    "stock": 5,
+    "valor": 0,
+    "imagen": "/images/monitor-4",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 5,
+    "nombre": "Monitor Gaming Samsung Odyssey G7 32\"",
+    "modelo": "Odyssey G7 (G70A)",
+    "marca": "Samsung",
+    "descripcion": "Monitor Gaming plano de 32 pulgadas, resolución 4K UHD (3840x2160), 144Hz, 1ms (GtG), G-Sync Compatible, DisplayHDR 400. Panel IPS.",
+    "color": "NEGRO",
+    "precio": 4859.04,
+    "stock": 8,
+    "valor": 0,
+    "imagen": "/images/monitor-5",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 6,
+    "nombre": "Monitor Dell 24\"",
+    "modelo": "P2422H",
+    "marca": "Dell",
+    "descripcion": "Monitor de productividad de 24 pulgadas, resolución Full HD (1920x1080), Panel IPS, 60Hz, diseño de bisel fino, ergonomía total.",
+    "color": "NEGRO",
+    "precio": 1218.00,
+    "stock": 30,
+    "valor": 0,
+    "imagen": "/images/monitor-6",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 7,
+    "nombre": "Monitor LG UltraWide 34\"",
+    "modelo": "34WP65C-B",
+    "marca": "LG",
+    "descripcion": "Monitor UltraWide Curvo de 34 pulgadas, resolución WFHD (2550x1080), Panel VA, 1ms MBR, 75Hz, HDR10, AMD FreeSync. Ideal para multitarea.",
+    "color": "NEGRO",
+    "precio": 2227.20,
+    "stock": 18,
+    "valor": 0,
+    "imagen": "/images/monitor-7",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 8,
+    "nombre": "Monitor Gaming ASUS TUF 24\"",
+    "modelo": "VG249Q1A",
+    "marca": "ASUS",
+    "descripcion": "Monitor Gaming de 23.8 pulgadas, resolución Full HD (1920x1080), Panel IPS, 165Hz (OC), 1ms MPRT, Extreme Low Motion Blur (ELMB).",
+    "color": "NEGRO",
+    "precio": 1113.53,
+    "stock": 25,
+    "valor": 0,
+    "imagen": "/images/monitor-8",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 9,
+    "nombre": "Monitor Curvo Samsung M7 Smart Monitor 32\"",
+    "modelo": "Smart M7 (M70B)",
+    "marca": "Samsung",
+    "descripcion": "Smart Monitor de 32 pulgadas, resolución 4K UHD, 60Hz. Funcionalidad Smart TV integrada, aplicaciones de streaming, DeX inalámbrico, control remoto.",
+    "color": "BLANCO/PLATA",
+    "precio": 2776.04,
+    "stock": 12,
+    "valor": 0,
+    "imagen": "/images/monitor-9",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 10,
+    "nombre": "Monitor BenQ MOBIUZ 27\"",
+    "modelo": "EX2710U",
+    "marca": "BenQ",
+    "descripcion": "Monitor Gaming de 27 pulgadas, resolución 4K UHD (3840x2160), Panel IPS, 144Hz, 1ms MPRT, HDRi y altavoces treVolo 2.1 integrados.",
+    "color": "GRIS OSCURO/NEGRO",
+    "precio": 5559.04,
+    "stock": 7,
+    "valor": 0,
+    "imagen": "/images/monitor-10",
+    "categoria": "Monitor"
+  },
+  {
+    "id_producto": 11,
+    "nombre": "Razer BlackShark V2",
+    "modelo": "BlackShark V2",
+    "marca": "Razer",
+    "descripcion": "Audífonos gaming con sonido envolvente 7.1, micrófono extraíble, almohadillas de espuma viscoelástica.",
+    "color": "NEGRO, VERDE, ROSA",
+    "precio": 476.00,
+    "stock": 12,
+    "valor": 0,
+    "imagen": "/images/audifonos-1",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 12,
+    "nombre": "TAGRY",
+    "modelo": "TAGRY T8",
+    "marca": "TAGRY",
+    "descripcion": "Auriculares Bluetooth, diseño ergonómico, buena duración de batería, micrófono incorporado.",
+    "color": "NEGRO, BLANCO",
+    "precio": 686.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/audifonos-2",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 13,
+    "nombre": "SteelSeries Arctis Nova 1",
+    "modelo": "Arctis Nova 1",
+    "marca": "SteelSeries",
+    "descripcion": "Sonido de alta fidelidad, micrófono ClearCast, diseño ligero y cómodo, compatible con múltiples plataformas.",
+    "color": "NEGRO, GRIS",
+    "precio": 826.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/audifonos-3",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 14,
+    "nombre": "BENGOO G9000",
+    "modelo": "G9000",
+    "marca": "BENGOO",
+    "descripcion": "Audífonos gaming con sonido estéreo, micrófono ajustable, diseño ergonómico, iluminación LED.",
+    "color": "AZUL, NEGRO, VERDE, NARANJA, ROSA",
+    "precio": 406.00,
+    "stock": 40,
+    "valor": 0,
+    "imagen": "/images/audifonos-4",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 15,
+    "nombre": "BERIBES",
+    "modelo": "B-1",
+    "marca": "BERIBES",
+    "descripcion": "Auriculares con sonido claro, diseño plegable, micrófono integrado, ideal para llamadas y música.",
+    "color": "BLANCO, NEGRO, VERDE, NARANJA ROJO, ROSA",
+    "precio": 350.00,
+    "stock": 30,
+    "valor": 0,
+    "imagen": "/images/audifonos-5",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 16,
+    "nombre": "Razer Kraken V3",
+    "modelo": "Kraken V3",
+    "marca": "Razer",
+    "descripcion": "Audio envolvente THX, micrófono mejorado, almohadillas de gel refrigerante, personalización RGB.",
+    "color": "VERDE, AZUL",
+    "precio": 1300.00,
+    "stock": 4,
+    "valor": 0,
+    "imagen": "/images/audifonos-6",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 17,
+    "nombre": "Logitech G",
+    "modelo": "G432",
+    "marca": "Logitech",
+    "descripcion": "Sonido envolvente DTS, micrófono giratorio, almohadillas de cuero sintético, compatible con múltiples plataformas.",
+    "color": "NEGRO",
+    "precio": 532.00,
+    "stock": 7,
+    "valor": 0,
+    "imagen": "/images/audifonos-7",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 18,
+    "nombre": "Razer Kraken Kitty V3",
+    "modelo": "Kraken Kitty V3",
+    "marca": "Razer",
+    "descripcion": "Sonido envolvente THX, micrófono retractable, iluminación RGB personalizable, diseño cómodo.",
+    "color": "NEGRO, ROSA, BLANCO",
+    "precio": 1700.00,
+    "stock": 5,
+    "valor": 0,
+    "imagen": "/images/audifonos-8",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 19,
+    "nombre": "Corsair HS65 Surround",
+    "modelo": "HS65 Surround",
+    "marca": "Corsair",
+    "descripcion": "Audio envolvente 7.1, micrófono omnidireccional, almohadillas de espuma viscoelástica, compatible con PC y consolas.",
+    "color": "NEGRO, GRIS",
+    "precio": 966.00,
+    "stock": 9,
+    "valor": 0,
+    "imagen": "/images/audifonos-9",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 20,
+    "nombre": "SENZER SG600",
+    "modelo": "SG600",
+    "marca": "SENZER",
+    "descripcion": "Sonido estéreo, micrófono ajustable, diseño cómodo, ideal para gaming y multimedia.",
+    "color": "NEGRO",
+    "precio": 224.00,
+    "stock": 20,
+    "valor": 0,
+    "imagen": "/images/audifonos-10",
+    "categoria": "Audífonos"
+  },
+  {
+    "id_producto": 21,
+    "nombre": "Laptop HP 14\" (AMD)",
+    "modelo": "HP 14\" (AMD)",
+    "marca": "HP",
+    "descripcion": "Windows 11** Hasta procesador AMD Ryzen™ serie 7 7730U11. Pantalla IPS Quad HD de 14\". Hasta 16 GB de RAM DDR4. Gráficos AMD Radeon™. Hasta 512GB de almacenamiento. Wi-Fi 6 y Bluetooth® 5.4. Cámara Full HD con reducción de ruido.",
+    "color": "GRIS, AZUL OSCURO",
+    "precio": 4599.00,
+    "stock": 12,
+    "valor": 0,
+    "imagen": "/images/laptop-1",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 22,
+    "nombre": "Laptop HP 15.6\" (AMD)",
+    "modelo": "HP 15.6\" (AMD)",
+    "marca": "HP",
+    "descripcion": "Windows 11** Hasta procesador AMD Ryzen™ serie 7 7730U11. Pantalla táctil IPS Full HD de 15.6\". Hasta 16 GB de RAM DDR4. Gráficos AMD Radeon™. Hasta 1 TB SSD PCIe NVMe. Wi-Fi 6 y Bluetooth® 5.3. Cámara Full HD.",
+    "color": "GRIS, BLANCO, PALO DE ROSA, CELESTE GRISÁCEO",
+    "precio": 9439.00,
+    "stock": 12,
+    "valor": 0,
+    "imagen": "/images/laptop-2",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 23,
+    "nombre": "Laptop HP OmniBook 5 16\" Next Gen con IA (AMD)",
+    "modelo": "HP OmniBook 5",
+    "marca": "HP",
+    "descripcion": "Windows 11** Hasta AMD Ryzen™ AI 752. Pantalla de 16\" 2K. Hasta 32 GB LPDDR5x. Gráficos AMD Radeon™ 860M. SSD PCIe Gen4 NVMe M.2 de hasta 1 TB. Tecla Copilot.",
+    "color": "GRIS",
+    "precio": 32350.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/laptop-3",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 24,
+    "nombre": "Notebook ASUS FA506NC-HN006",
+    "modelo": "ASUS FA506NC-HN006",
+    "marca": "ASUS",
+    "descripcion": "Pantalla FHD 15.6\" 1920x1080. AMD Ryzen 5 7535HS 4.55GHz. 8GB LPDDR5X. 512GB SSD M.2. GPU NVIDIA GeForce RTX 3050 4GB. Wi-Fi 6, Bluetooth 5.3. Teclado retroiluminado. FreeDos. Batería 3 celdas.",
+    "color": "NEGRO GRAFITO",
+    "precio": 14999.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/laptop-4",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 25,
+    "nombre": "HP OmniBook 5 Flip de 14\"",
+    "modelo": "HP OmniBook 5 Flip",
+    "marca": "HP",
+    "descripcion": "Windows 11** Hasta Intel® Core™ 755. Pantalla multitáctil 14\" 2K. Hasta 24 GB LPDDR5. Gráficos Intel® opcionales. SSD PCIe Gen4 NVMe M.2 de hasta 1 TB. Tecla Copilot.",
+    "color": "GRIS, CELESTE CIELO",
+    "precio": 21780.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/laptop-5",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 26,
+    "nombre": "HP OmniBook 7 de 17.3\" Next Gen AI",
+    "modelo": "HP OmniBook 7",
+    "marca": "HP",
+    "descripcion": "Windows 11 Home** Intel® Core™ Ultra 7 258V. Pantalla táctil 17.3\" Full HD. Hasta 32 GB LPDDR5x-8533 MHz. GPU NVIDIA® GeForce RTX™ 4050. SSD hasta 2 TB. Wi-Fi 7 y Bluetooth® 5.4. Cámara IR 5MP. HP Fast Charge.",
+    "color": "GRIS",
+    "precio": 25330.00,
+    "stock": 12,
+    "valor": 0,
+    "imagen": "/images/laptop-6",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 27,
+    "nombre": "OMEN 16 2023 (INTEL)",
+    "modelo": "OMEN",
+    "marca": "HP",
+    "descripcion": "Windows 11** Intel® Core™ 9-14900HX. Pantalla IPS 16\" QHD 240 Hz. Hasta 32 GB DDR5. GPU NVIDIA® GeForce RTX™ 4080 (12 GB). SSD PCIe NVMe 2 TB.",
+    "color": "NEGRO",
+    "precio": 14940.00,
+    "stock": 12,
+    "valor": 0,
+    "imagen": "/images/laptop-7",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 28,
+    "nombre": "OMEN TRANSCEND 14 2024 (INTEL)",
+    "modelo": "OMEN",
+    "marca": "HP",
+    "descripcion": "Windows 11** Intel® Core™ Ultra 9 185H. Pantalla 2.8K OLED 14\". Hasta 32 GB LPDDR5x-7467 MHz. GPU NVIDIA® GeForce RTX™ 4070 (8 GB). SSD PCIe Gen4 NVMe 2 TB.",
+    "color": "NEGRO, BLANCO",
+    "precio": 15390.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/laptop-8",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 29,
+    "nombre": "OMEN MAX 16 GAMING LAPTOP (INTEL)",
+    "modelo": "OMEN",
+    "marca": "HP",
+    "descripcion": "Windows 11** Intel® Core™ Ultra 9 275HX. Pantalla OLED 16\" WQXGA 240 Hz. Hasta 64 GB DDR5. GPU NVIDIA® GeForce RTX™ 5090 (24 GB). SSD PCIe NVMe 2 TB.",
+    "color": "NEGRO, BLANCO",
+    "precio": 41600.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/laptop-9",
+    "categoria": "Laptop"
+  },
+  {
+    "id_producto": 30,
+    "nombre": "OMEN 16 2023 (AMD/NVIDIA)",
+    "modelo": "OMEN",
+    "marca": "HP",
+    "descripcion": "Windows 11** AMD Ryzen™ 9 7940HS. Pantalla 16.1\" IPS antirreflejante. Hasta 32 GB DDR5. GPU NVIDIA® GeForce RTX™ 4080 (12 GB). SSD PCIe NVMe 2 TB.",
+    "color": "NEGRO",
+    "precio": 27420.00,
+    "stock": 10,
+    "valor": 0,
+    "imagen": "/images/laptop-10",
+    "categoria": "Laptop"
+  }
+];
+function formatPrice(price) {
+    // Usamos USD como moneda por el tipo de cambio del JSON
+    return new Intl.NumberFormat('es-ES', {
+        style: 'currency',
+        currency: 'USD', 
+        minimumFractionDigits: 2
+    }).format(price);
+}
+
+// FUNCIÓN PRINCIPAL PARA RENDERIZAR LOS PRODUCTOS
+function renderizarProductos() {
+    const productGrid = document.getElementById('product-grid');
+    
+    // Si el contenedor no existe, salimos
+    if (!productGrid) return; 
+
+    // Limpia el contenido estático que pudieras haber dejado en el HTML
+    productGrid.innerHTML = ''; 
+
+    productos.forEach(producto => {
+        // 1. Crear el contenedor principal del producto
+        const item = document.createElement('div');
+        item.classList.add('product-item');
+        item.setAttribute('data-category', producto.categoria.toLowerCase());
+        item.setAttribute('data-id', producto.id_producto);
+
+        // 2. Crear el elemento de imagen
+        const img = document.createElement('img');
+        // Asegúrate de que las rutas sean correctas, si usas la ruta /images/... la imagen debe estar en esa carpeta.
+        const imagePath = producto.imagen ? `${producto.imagen}.png` : 'images/placeholder.png'; 
+        img.src = imagePath; 
+        img.alt = producto.nombre; 
+
+        // 3. Crear el elemento para la categoría
+        const categoryP = document.createElement('p');
+        categoryP.classList.add('category-text');
+        categoryP.textContent = producto.categoria;
+
+
+        // 4. Crear el elemento para el nombre (título)
+        const nameP = document.createElement('p');
+        nameP.classList.add('product-name');
+        nameP.textContent = producto.nombre;
+
+        // 5. Crear el elemento para el precio
+        const priceP = document.createElement('p');
+        priceP.classList.add('price');
+        priceP.textContent = formatPrice(producto.precio); 
+
+        // 6. Ensamblar todos los elementos dentro del item
+        item.appendChild(img);
+        item.appendChild(categoryP); 
+        item.appendChild(nameP);
+        item.appendChild(priceP);
+        
+        // 7. Agregar el producto al contenedor principal
+        productGrid.appendChild(item);
+    });
+}
+
+// Ejecutar la función cuando el documento esté completamente cargado
+document.addEventListener('DOMContentLoaded', renderizarProductos);

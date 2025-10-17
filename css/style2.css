@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    color: #333;
+}
+/*header*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+/*footer*/
+.main-footer {
+    background-color: #ffffff;
+    color: #333;
+    padding: 60px 40px;
+    position: relative;
+    border-top: 1px solid #eee;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex-basis: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.footer-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+/* --- Columna de Contacto --- */
+.contact-column p {
+    margin: 0 0 5px 0;
+}
+
+.contact-label {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 15px !important;
+}
+
+.contact-detail {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 5px;
+}
+
+.footer-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+    line-height: 1.6;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.terms-link,
+.privacy-link {
+    color: #ff4500;
+}
+
+.terms-link:hover,
+.privacy-link:hover {
+    color: #e04000;
+}
+
+.newsletter-text {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 250px;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.newsletter-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: fit-content;
+}
+
+.newsletter-button:hover {
+    background-color: #555;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        flex-basis: 100%;
+        padding: 0;
+    }
+    
+    .newsletter-form {
+        max-width: 100%;
+    }
+    
+    .newsletter-button {
+        width: 100%;
+    }
+    
+    .accessibility-icon {
+        left: 20px;
+        bottom: 10px;
+    }
+}
+
+/*tienda*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #4CAF50; /* Color similar al de la imagen */
+}
+
+.content-area {
+    display: flex; /* Usamos flexbox para la distribución lateral */
+    gap: 40px;
+}
+
+/* Estilos para las categorías */
+.categories {
+    flex: 0 0 200px; /* Ancho fijo para las categorías */
+}
+
+.categories h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.categories li:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la lista de productos */
+.product-list {
+    flex-grow: 1;
+    display: grid; /* Usamos grid para la distribución de productos */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 20px;
+    text-align: center;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: #333;
+}

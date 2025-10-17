@@ -1,0 +1,56 @@
+CREATE DATABASE novatech;
+USE novatech;
+
+CREATE TABLE productos (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    modelo VARCHAR(50),
+    marca VARCHAR(50),
+    descripcion TEXT,
+    color VARCHAR(30),
+    precio DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL DEFAULT 0,
+    valor INT NOT NULL DEFAULT 0,
+    imagen VARCHAR(255)
+);
+
+INSERT INTO productos (nombre, modelo, marca, descripcion, color, precio, stock, valor, imagen) VALUES
+('Laptop HP 14" (AMD)', 'HP 14" (AMD)', 'HP',
+'Windows 11** Hasta procesador AMD Ryzen™ serie 7 7730U11. Pantalla IPS Quad HD de 14". Hasta 16 GB de RAM DDR4. Gráficos AMD Radeon™. Hasta 512GB de almacenamiento. Wi-Fi 6 y Bluetooth® 5.4. Cámara Full HD con reducción de ruido.',
+'GRIS, AZUL OSCURO', 4599.00, 12, 0, NULL),
+
+('Laptop HP 15.6" (AMD)', 'HP 15.6" (AMD)', 'HP',
+'Windows 11** Hasta procesador AMD Ryzen™ serie 7 7730U11. Pantalla táctil IPS Full HD de 15.6". Hasta 16 GB de RAM DDR4. Gráficos AMD Radeon™. Hasta 1 TB SSD PCIe NVMe. Wi-Fi 6 y Bluetooth® 5.3. Cámara Full HD.',
+'GRIS, BLANCO, PALO DE ROSA, CELESTE GRISÁCEO', 9439.00, 12, 0, NULL),
+
+('Laptop HP OmniBook 5 16" Next Gen con IA (AMD)', 'HP OmniBook 5', 'HP',
+'Windows 11** Hasta AMD Ryzen™ AI 752. Pantalla de 16" 2K. Hasta 32 GB LPDDR5x. Gráficos AMD Radeon™ 860M. SSD PCIe Gen4 NVMe M.2 de hasta 1 TB. Tecla Copilot.',
+'GRIS', 32350.00, 10, 0, NULL),
+
+('Notebook ASUS FA506NC-HN006', 'ASUS FA506NC-HN006', 'ASUS',
+'Pantalla FHD 15.6" 1920x1080. AMD Ryzen 5 7535HS 4.55GHz. 8GB LPDDR5X. 512GB SSD M.2. GPU NVIDIA GeForce RTX 3050 4GB. Wi-Fi 6, Bluetooth 5.3. Teclado retroiluminado. FreeDos. Batería 3 celdas.',
+'NEGRO GRAFITO', 14999.00, 10, 0, NULL),
+
+('HP OmniBook 5 Flip de 14"', 'HP OmniBook 5 Flip', 'HP',
+'Windows 11** Hasta Intel® Core™ 755. Pantalla multitáctil 14" 2K. Hasta 24 GB LPDDR5. Gráficos Intel® opcionales. SSD PCIe Gen4 NVMe M.2 de hasta 1 TB. Tecla Copilot.',
+'GRIS, CELESTE CIELO', 21780.00, 10, 0, NULL),
+
+('HP OmniBook 7 de 17.3" Next Gen AI', 'HP OmniBook 7', 'HP',
+'Windows 11 Home** Intel® Core™ Ultra 7 258V. Pantalla táctil 17.3" Full HD. Hasta 32 GB LPDDR5x-8533 MHz. GPU NVIDIA® GeForce RTX™ 4050. SSD hasta 2 TB. Wi-Fi 7 y Bluetooth® 5.4. Cámara IR 5MP. HP Fast Charge.',
+'GRIS', 25330.00, 12, 0, NULL),
+
+('OMEN 16 2023 (INTEL)', 'OMEN', 'HP',
+'Windows 11** Intel® Core™ 9-14900HX. Pantalla IPS 16" QHD 240 Hz. Hasta 32 GB DDR5. GPU NVIDIA® GeForce RTX™ 4080 (12 GB). SSD PCIe NVMe 2 TB.',
+'NEGRO', 14940.00, 12, 0, NULL),
+
+('OMEN TRANSCEND 14 2024 (INTEL)', 'OMEN', 'HP',
+'Windows 11** Intel® Core™ Ultra 9 185H. Pantalla 2.8K OLED 14". Hasta 32 GB LPDDR5x-7467 MHz. GPU NVIDIA® GeForce RTX™ 4070 (8 GB). SSD PCIe Gen4 NVMe 2 TB.',
+'NEGRO, BLANCO', 15390.00, 10, 0, NULL),
+
+('OMEN MAX 16 GAMING LAPTOP (INTEL)', 'OMEN', 'HP',
+'Windows 11** Intel® Core™ Ultra 9 275HX. Pantalla OLED 16" WQXGA 240 Hz. Hasta 64 GB DDR5. GPU NVIDIA® GeForce RTX™ 5090 (24 GB). SSD PCIe NVMe 2 TB.',
+'NEGRO, BLANCO', 41600.00, 10, 0, NULL),
+
+('OMEN 16 2023 (AMD/NVIDIA)', 'OMEN', 'HP',
+'Windows 11** AMD Ryzen™ 9 7940HS. Pantalla 16.1" IPS antirreflejante. Hasta 32 GB DDR5. GPU NVIDIA® GeForce RTX™ 4080 (12 GB). SSD PCIe NVMe 2 TB.',
+'NEGRO', 27420.00, 10, 0, NULL);
