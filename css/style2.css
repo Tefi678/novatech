@@ -29,7 +29,7 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 0.9em;
     text-transform: uppercase;
@@ -65,7 +65,6 @@ body {
     color: #333;
 }
 
-/* --- Columna de Contacto --- */
 .contact-column p {
     margin: 0 0 5px 0;
 }
@@ -188,17 +187,16 @@ body {
     margin-bottom: 40px;
     font-size: 2em;
     font-weight: bold;
-    color: #4CAF50; /* Color similar al de la imagen */
+    color: #4CAF50;
 }
 
 .content-area {
-    display: flex; /* Usamos flexbox para la distribución lateral */
+    display: flex;
     gap: 40px;
 }
 
-/* Estilos para las categorías */
 .categories {
-    flex: 0 0 200px; /* Ancho fijo para las categorías */
+    flex: 0 0 200px;
 }
 
 .categories h3 {
@@ -223,11 +221,10 @@ body {
     text-decoration: underline;
 }
 
-/* Estilos para la lista de productos */
 .product-list {
     flex-grow: 1;
-    display: grid; /* Usamos grid para la distribución de productos */
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     text-align: center;
 }

@@ -20,7 +20,7 @@ const productos = [
     "precio": 1870.44,
     "stock": 15,
     "valor": 0,
-    "imagen": "/images/monitor-1",
+    "imagen": "/images/monitor-1.jpg",
     "categoria": "Monitor"
   },
   {
@@ -33,7 +33,7 @@ const productos = [
     "precio": 2497.44,
     "stock": 20,
     "valor": 0,
-    "imagen": "/images/monitor-2",
+    "imagen": "/images/monitor-2.jpg",
     "categoria": "Monitor"
   },
   {
@@ -46,7 +46,7 @@ const productos = [
     "precio": 4621.57,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/monitor-3",
+    "imagen": "/images/monitor-3.jpg",
     "categoria": "Monitor"
   },
   {
@@ -59,7 +59,7 @@ const productos = [
     "precio": 24360.00,
     "stock": 5,
     "valor": 0,
-    "imagen": "/images/monitor-4",
+    "imagen": "/images/monitor-4.png",
     "categoria": "Monitor"
   },
   {
@@ -72,7 +72,7 @@ const productos = [
     "precio": 4859.04,
     "stock": 8,
     "valor": 0,
-    "imagen": "/images/monitor-5",
+    "imagen": "/images/monitor-5.jpg",
     "categoria": "Monitor"
   },
   {
@@ -85,7 +85,7 @@ const productos = [
     "precio": 1218.00,
     "stock": 30,
     "valor": 0,
-    "imagen": "/images/monitor-6",
+    "imagen": "/images/monitor-6.jpg",
     "categoria": "Monitor"
   },
   {
@@ -98,7 +98,7 @@ const productos = [
     "precio": 2227.20,
     "stock": 18,
     "valor": 0,
-    "imagen": "/images/monitor-7",
+    "imagen": "/images/monitor-7.jpg",
     "categoria": "Monitor"
   },
   {
@@ -111,7 +111,7 @@ const productos = [
     "precio": 1113.53,
     "stock": 25,
     "valor": 0,
-    "imagen": "/images/monitor-8",
+    "imagen": "/images/monitor-8.jpg",
     "categoria": "Monitor"
   },
   {
@@ -124,7 +124,7 @@ const productos = [
     "precio": 2776.04,
     "stock": 12,
     "valor": 0,
-    "imagen": "/images/monitor-9",
+    "imagen": "/images/monitor-9.jpg",
     "categoria": "Monitor"
   },
   {
@@ -137,7 +137,7 @@ const productos = [
     "precio": 5559.04,
     "stock": 7,
     "valor": 0,
-    "imagen": "/images/monitor-10",
+    "imagen": "/images/monitor-10.jpg",
     "categoria": "Monitor"
   },
   {
@@ -150,7 +150,7 @@ const productos = [
     "precio": 476.00,
     "stock": 12,
     "valor": 0,
-    "imagen": "/images/audifonos-1",
+    "imagen": "/images/audifono-1.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -163,7 +163,7 @@ const productos = [
     "precio": 686.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/audifonos-2",
+    "imagen": "/images/audifono-2.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -176,7 +176,7 @@ const productos = [
     "precio": 826.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/audifonos-3",
+    "imagen": "/images/audifono-3.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -189,7 +189,7 @@ const productos = [
     "precio": 406.00,
     "stock": 40,
     "valor": 0,
-    "imagen": "/images/audifonos-4",
+    "imagen": "/images/audifono-4.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -202,7 +202,7 @@ const productos = [
     "precio": 350.00,
     "stock": 30,
     "valor": 0,
-    "imagen": "/images/audifonos-5",
+    "imagen": "/images/audifono-5.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -215,7 +215,7 @@ const productos = [
     "precio": 1300.00,
     "stock": 4,
     "valor": 0,
-    "imagen": "/images/audifonos-6",
+    "imagen": "/images/audifono-6.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -228,7 +228,7 @@ const productos = [
     "precio": 532.00,
     "stock": 7,
     "valor": 0,
-    "imagen": "/images/audifonos-7",
+    "imagen": "/images/audifono-7.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -241,7 +241,7 @@ const productos = [
     "precio": 1700.00,
     "stock": 5,
     "valor": 0,
-    "imagen": "/images/audifonos-8",
+    "imagen": "/images/audifono-8.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -254,7 +254,7 @@ const productos = [
     "precio": 966.00,
     "stock": 9,
     "valor": 0,
-    "imagen": "/images/audifonos-9",
+    "imagen": "/images/audifono-9.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -267,7 +267,7 @@ const productos = [
     "precio": 224.00,
     "stock": 20,
     "valor": 0,
-    "imagen": "/images/audifonos-10",
+    "imagen": "/images/audifono-10.jpg",
     "categoria": "Audífonos"
   },
   {
@@ -280,7 +280,7 @@ const productos = [
     "precio": 4599.00,
     "stock": 12,
     "valor": 0,
-    "imagen": "/images/laptop-1",
+    "imagen": "/images/laptop-1.png",
     "categoria": "Laptop"
   },
   {
@@ -293,7 +293,7 @@ const productos = [
     "precio": 9439.00,
     "stock": 12,
     "valor": 0,
-    "imagen": "/images/laptop-2",
+    "imagen": "/images/laptop-2.png",
     "categoria": "Laptop"
   },
   {
@@ -306,7 +306,7 @@ const productos = [
     "precio": 32350.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/laptop-3",
+    "imagen": "/images/laptop-3.png",
     "categoria": "Laptop"
   },
   {
@@ -319,7 +319,7 @@ const productos = [
     "precio": 14999.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/laptop-4",
+    "imagen": "/images/laptop-4.png",
     "categoria": "Laptop"
   },
   {
@@ -332,7 +332,7 @@ const productos = [
     "precio": 21780.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/laptop-5",
+    "imagen": "/images/laptop-5.png",
     "categoria": "Laptop"
   },
   {
@@ -345,7 +345,7 @@ const productos = [
     "precio": 25330.00,
     "stock": 12,
     "valor": 0,
-    "imagen": "/images/laptop-6",
+    "imagen": "/images/laptop-6.png",
     "categoria": "Laptop"
   },
   {
@@ -358,7 +358,7 @@ const productos = [
     "precio": 14940.00,
     "stock": 12,
     "valor": 0,
-    "imagen": "/images/laptop-7",
+    "imagen": "/images/laptop-7.png",
     "categoria": "Laptop"
   },
   {
@@ -371,7 +371,7 @@ const productos = [
     "precio": 15390.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/laptop-8",
+    "imagen": "/images/laptop-8.png",
     "categoria": "Laptop"
   },
   {
@@ -384,7 +384,7 @@ const productos = [
     "precio": 41600.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/laptop-9",
+    "imagen": "/images/laptop-9.png",
     "categoria": "Laptop"
   },
   {
@@ -397,7 +397,7 @@ const productos = [
     "precio": 27420.00,
     "stock": 10,
     "valor": 0,
-    "imagen": "/images/laptop-10",
+    "imagen": "/images/laptop-10.png",
     "categoria": "Laptop"
   }
 ];
@@ -430,7 +430,7 @@ function renderizarProductos() {
         // 2. Crear el elemento de imagen
         const img = document.createElement('img');
         // Asegúrate de que las rutas sean correctas, si usas la ruta /images/... la imagen debe estar en esa carpeta.
-        const imagePath = producto.imagen ? `${producto.imagen}.png` : 'images/placeholder.png'; 
+        const imagePath = producto.imagen ? `${producto.imagen}` : 'images/placeholder'; 
         img.src = imagePath; 
         img.alt = producto.nombre; 
 
