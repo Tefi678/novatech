@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novatech - Tecnología de Vanguardia</title>
+    <link rel="icon" type="image/png" href="/images/logo-n.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="py-5">
+        <h2 class="text-center fw-bold mb-5">Nuestros Productos Destacados</h2>
+        
+        <div id="mainCarousel" class="carousel slide container" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded-3 shadow-lg">
+                <div class="carousel-item active">
+                    <img src="/images/imagen1.png" class="d-block w-100" alt="Banner de oferta de Novatech">
+                    <div class="carousel-caption d-none d-md-block">
+                        <button type="button" class="btn btn-primary btn-lg shadow-lg">Ver Ofertas</button>
+                    </div>
+                </div> 
+                <div class="carousel-item">
+                    <img src="/images/imagen2.png" class="d-block w-100" alt="Banner de auriculares Novatech">
+                    <div class="carousel-caption d-none d-md-block">
+                        <button type="button" class="btn btn-primary btn-lg shadow-lg">Comprar Audio</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/imagen3.png" class="d-block w-100" alt="Banner de descuentos Novatech">
+                    <div class="carousel-caption d-none d-md-block">
+                        <button type="button" class="btn btn-primary btn-lg shadow-lg">Ir a Descuentos</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <div class="container my-5 py-5 animate-on-scroll">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-5 d-flex justify-content-center">
+                    <img src="/images/logo-sin-fondo.png" class="img-fluid w-75 Novatech shadow-lg" alt="Equipo Novatech">
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="custom-card p-4 p-md-5 border rounded-3 shadow-lg bg-dark">
+                        <div class="card-body p-0">
+                            <h2 class="card-title fw-bold mb-3 text-primary">Acerca de Novatech</h2>
+                            <p class="card-text text-light">
+                                Somos una tienda dedicada a ofrecer productos electrónicos de **alta calidad** y el **mejor servicio** al cliente. Nuestra misión es acercarte la tecnología más innovadora, desde *smartphones* y *wearables* hasta equipos de cómputo y accesorios de audio. Te invitamos a explorar nuestra selección cuidadosamente elegida.
+                            </p>
+                            <button type="button" class="btn btn-primary mt-3">Conocer más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 py-5">
+            <div class="row text-center mb-5 animate-on-scroll">
+                <div class="col-12">
+                    <h2 class="fw-bold display-5 text-primary">Nuestros Productos</h2>
+                    <p class="text-secondary fs-5">
+                        Descubre una amplia gama de artículos tecnológicos. Calidad, innovación y el mejor precio.
+                    </p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="product-grid">
+                <div class="col animate-on-scroll">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm transition-hover text-center">
+                            <div class="d-flex justify-content-center align-items-center p-4 bg-light rounded-top" style="min-height: 200px;">
+                                <img src="/images/imagen_1.png" class="card-img-top img-fluid" alt="Smartphone de Novatech" style="max-height: 150px; width: auto; object-fit: contain;">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold text-dark">Smartphone X</h5>
+                                <p class="card-text mb-1 fw-bold text-success fs-5">$399.99</p>
+                                <p class="card-text text-muted small">Móvil Inteligente</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col animate-on-scroll delay-1">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm transition-hover text-center">
+                            <div class="d-flex justify-content-center align-items-center p-4 bg-light rounded-top" style="min-height: 200px;">
+                                <img src="/images/imagen_2.png" class="card-img-top img-fluid" alt="Auriculares Inalámbricos" style="max-height: 150px; width: auto; object-fit: contain;">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold text-dark">Audífonos Pro</h5>
+                                <p class="card-text mb-1 fw-bold text-success fs-5">$79.50</p>
+                                <p class="card-text text-muted small">Audio Bluetooth</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col animate-on-scroll delay-2">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm transition-hover text-center">
+                            <div class="d-flex justify-content-center align-items-center p-4 bg-light rounded-top" style="min-height: 200px;">
+                                <img src="/images/audifono-2.jpg" class="card-img-top img-fluid" alt="Audífonos Diadema Negros" style="max-height: 150px; width: auto; object-fit: contain;">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold text-dark">Audífonos DJ</h5>
+                                <p class="card-text mb-1 fw-bold text-success fs-5">$120.00</p>
+                                <p class="card-text text-muted small">Auriculares de Diadema</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col animate-on-scroll delay-3">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm transition-hover text-center">
+                            <div class="d-flex justify-content-center align-items-center p-4 bg-light rounded-top" style="min-height: 200px;">
+                                <img src="/images/imagen_4.png" class="card-img-top img-fluid" alt="Reloj Inteligente" style="max-height: 150px; width: auto; object-fit: contain;">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold text-dark">Smartwatch Z</h5>
+                                <p class="card-text mb-1 fw-bold text-success fs-5">$149.99</p>
+                                <p class="card-text text-muted small">Reloj Inteligente</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-outline-light btn-lg">Ver más productos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid hero-split-section animate-on-scroll">
+            <div class="row g-0">
+                <div class="col-12 col-md-6 hero-image-col order-md-2">
+                    <div class="image-container">
+                        <img src="/images/compu.png" alt="Laptop y Accesorios Novatech" class="img-fluid sunglasses-image">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 hero-content-col order-md-1">
+                    <div class="content-wrapper">
+                        <h2 class="section-title">La Próxima Generación de Cómputo</h2>
+                        <hr class="title-divider">
+                        
+                        <p class="section-text">
+                            Descubre nuestra línea de laptops y equipos de alto rendimiento. Diseñados para profesionales, gamers y estudiantes que exigen potencia, velocidad y eficiencia. Trabaja, crea y juega sin límites con la tecnología que impulsa el futuro.
+                        </p>
+                        
+                        <a href="#" class="btn btn-outline-light shop-now-btn">
+                            Explorar Laptops
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container my-5 py-5 text-center animate-on-scroll">
+            <h2 class="section-title-testimonial fw-bold mb-3">Lo que dicen nuestros clientes</h2>
+            <p class="text-muted mb-5">
+                La calidad y el servicio nos distinguen. Tu satisfacción es nuestra prioridad.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-start text-start">
+                            <div class="profile-image-container me-4">
+                                <img src="/images/logo-n.png" alt="Foto de Sandy Mark" class="img-fluid profile-image">
+                            </div>
+                            <div class="testimonial-content">
+                                <h4 class="client-name fw-bold mb-2">Sandy Mark</h4>
+                                <p class="client-review mb-0">
+                                    "La atención que recibí fue excepcional. El equipo de Novatech me ayudó a encontrar la laptop perfecta para mis necesidades, y la entrega fue rápida. ¡Totalmente recomendado por la calidad de sus productos y el soporte post-venta!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-indicators mt-5">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div id="map-background">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15312.42838421833!2d-66.1558223652873!3d-17.38795777413661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3752e505a74e5%3A0xc6c78a05f0c4c4b5!2sCochabamba%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000!5m2!1ses!2sbo" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="map-iframe"
+                    title="Ubicación de Novatech en Cochabamba"
+                ></iframe>
+            </div>
+            <div class="form-overlay-container">
+                <div class="contact-form-card animate-on-scroll">
+                    <h3 class="form-title">Contáctanos</h3>
+                    <form id="contactForm" action="https://formspree.io/f/tu-hash-a-srlnovatech6@gmail.com" method="POST">
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control custom-input" id="name" name="Nombre" placeholder="Nombre Completo" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="tel" class="form-control custom-input" id="phone" name="Telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="email" class="form-control custom-input" id="email" name="_replyto" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-group mb-5">
+                            <textarea class="form-control custom-input" id="message" name="Mensaje" placeholder="Mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary custom-send-btn">
+                            ENVIAR
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/scripts/script1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

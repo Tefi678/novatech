@@ -9,6 +9,7 @@ fetch('footer.html')
     .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
     });
+    
 const productos = [
 {
     "id_producto": 1,
@@ -21,7 +22,7 @@ const productos = [
     "stock": 15,
     "valor": 0,
     "imagen": "/images/monitor-1.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 2,
@@ -34,7 +35,7 @@ const productos = [
     "stock": 20,
     "valor": 0,
     "imagen": "/images/monitor-2.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 3,
@@ -47,7 +48,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/monitor-3.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 4,
@@ -60,7 +61,7 @@ const productos = [
     "stock": 5,
     "valor": 0,
     "imagen": "/images/monitor-4.png",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 5,
@@ -73,7 +74,7 @@ const productos = [
     "stock": 8,
     "valor": 0,
     "imagen": "/images/monitor-5.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 6,
@@ -86,7 +87,7 @@ const productos = [
     "stock": 30,
     "valor": 0,
     "imagen": "/images/monitor-6.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 7,
@@ -99,7 +100,7 @@ const productos = [
     "stock": 18,
     "valor": 0,
     "imagen": "/images/monitor-7.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 8,
@@ -112,7 +113,7 @@ const productos = [
     "stock": 25,
     "valor": 0,
     "imagen": "/images/monitor-8.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 9,
@@ -125,7 +126,7 @@ const productos = [
     "stock": 12,
     "valor": 0,
     "imagen": "/images/monitor-9.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 10,
@@ -138,7 +139,7 @@ const productos = [
     "stock": 7,
     "valor": 0,
     "imagen": "/images/monitor-10.jpg",
-    "categoria": "Monitor"
+    "categoria": "Monitores"
   },
   {
     "id_producto": 11,
@@ -151,7 +152,7 @@ const productos = [
     "stock": 12,
     "valor": 0,
     "imagen": "/images/audifono-1.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 12,
@@ -164,7 +165,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/audifono-2.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 13,
@@ -177,7 +178,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/audifono-3.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 14,
@@ -190,7 +191,7 @@ const productos = [
     "stock": 40,
     "valor": 0,
     "imagen": "/images/audifono-4.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 15,
@@ -203,7 +204,7 @@ const productos = [
     "stock": 30,
     "valor": 0,
     "imagen": "/images/audifono-5.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 16,
@@ -216,7 +217,7 @@ const productos = [
     "stock": 4,
     "valor": 0,
     "imagen": "/images/audifono-6.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 17,
@@ -229,7 +230,7 @@ const productos = [
     "stock": 7,
     "valor": 0,
     "imagen": "/images/audifono-7.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 18,
@@ -242,7 +243,7 @@ const productos = [
     "stock": 5,
     "valor": 0,
     "imagen": "/images/audifono-8.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 19,
@@ -255,7 +256,7 @@ const productos = [
     "stock": 9,
     "valor": 0,
     "imagen": "/images/audifono-9.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 20,
@@ -268,7 +269,7 @@ const productos = [
     "stock": 20,
     "valor": 0,
     "imagen": "/images/audifono-10.jpg",
-    "categoria": "Audífonos"
+    "categoria": "Audifonos"
   },
   {
     "id_producto": 21,
@@ -281,7 +282,7 @@ const productos = [
     "stock": 12,
     "valor": 0,
     "imagen": "/images/laptop-1.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 22,
@@ -294,7 +295,7 @@ const productos = [
     "stock": 12,
     "valor": 0,
     "imagen": "/images/laptop-2.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 23,
@@ -307,7 +308,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/laptop-3.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 24,
@@ -320,7 +321,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/laptop-4.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 25,
@@ -333,7 +334,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/laptop-5.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 26,
@@ -346,7 +347,7 @@ const productos = [
     "stock": 12,
     "valor": 0,
     "imagen": "/images/laptop-6.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 27,
@@ -359,7 +360,7 @@ const productos = [
     "stock": 12,
     "valor": 0,
     "imagen": "/images/laptop-7.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 28,
@@ -372,7 +373,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/laptop-8.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 29,
@@ -385,7 +386,7 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/laptop-9.png",
-    "categoria": "Laptop"
+    "categoria": "Laptops"
   },
   {
     "id_producto": 30,
@@ -398,68 +399,233 @@ const productos = [
     "stock": 10,
     "valor": 0,
     "imagen": "/images/laptop-10.png",
-    "categoria": "Laptop"
-  }
+    "categoria": "Laptops"
+  },
+  {
+        "id_producto": 31,
+        "nombre": "Teclado Multimedia Delux KA180",
+        "modelo": "KA180",
+        "marca": "Delux",
+        "descripcion": "Teclado con cable USB. 104 teclas estándar + 12 teclas multimedia. Compatible con Win XP, W7, W8, W10 y W11. Dimensiones: 439,20*141,5*25,50 mm.",
+        "color": "NEGRO",
+        "precio": 160.00 / 8,
+        "stock": 15,
+        "valor": 0,
+        "imagen": "/images/teclado-1.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 32,
+        "nombre": "Teclado USB Havit KB376 Español",
+        "modelo": "KB376",
+        "marca": "Havit",
+        "descripcion": "Teclado en español con 104 teclas. Interfaz USB 2.0. Plug and play, resistente al agua. Dimensiones: 41×12×1,8 cm.",
+        "color": "NEGRO",
+        "precio": 107.64 / 8, // Bs.107,64 / 8 = USD 13.455
+        "stock": 20,
+        "valor": 0,
+        "imagen": "/images/teclado-2.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 33,
+        "nombre": "Teclado Gaming Cronex Gárgola GK-B1",
+        "modelo": "GK-B1 (Gárgola)",
+        "marca": "Cronex",
+        "descripcion": "Teclado Gaming con iluminación LED Rainbow. Teclas resistentes al desgaste (barniz UV). Conexión USB de alta respuesta y teclas multimedia.",
+        "color": "NEGRO",
+        "precio": 115.00 / 8, // Bs.115,00 / 8 = USD 14.375
+        "stock": 10,
+        "valor": 0,
+        "imagen": "/images/teclado-3.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 34,
+        "nombre": "Teclado Multimedia SURE KB 8151",
+        "modelo": "KB 8151",
+        "marca": "SURE",
+        "descripcion": "Diseño Windows M.E. 9 teclas de acceso rápido a Internet y multimedia. Puerto PS/2 (asumo USB o combo por compatibilidad moderna). Compatible con sistemas operativos antiguos y modernos.",
+        "color": "NEGRO",
+        "precio": 70.00 / 8, // Bs.70.00 / 8 = USD 8.75
+        "stock": 35,
+        "valor": 0,
+        "imagen": "/images/teclado-4.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 35,
+        "nombre": "Teclado GENIUS Slimstar M200",
+        "modelo": "Slimstar M200",
+        "marca": "GENIUS",
+        "descripcion": "Elegante teclado multimedia con teclas 'chocolate' para uso en oficina. Conexión USB plug & play, cable de 1.5 M. 12 teclas multimedia.",
+        "color": "NEGRO",
+        "precio": 120.00 / 8, // Bs.120.00 / 8 = USD 15.00
+        "stock": 25,
+        "valor": 0,
+        "imagen": "/images/teclado-5.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 36,
+        "nombre": "ROWELL MULTIMEDIA KEYBOARD (Español)",
+        "modelo": "ROW-M-K",
+        "marca": "ROWELL",
+        "descripcion": "Teclado multimedia en español. 107 teclas + 8 multimedia. Completo con teclado numérico. Diseño Super Slim, a prueba de derrames. Conexión USB, cable de 1.2m.",
+        "color": "NEGRO",
+        "precio": 70.00 / 8, // Bs.70.00 / 8 = USD 8.75
+        "stock": 30,
+        "valor": 0,
+        "imagen": "/images/teclado-6.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 37,
+        "nombre": "Teclado Inalámbrico Logitech K230",
+        "modelo": "K230",
+        "marca": "Logitech",
+        "descripcion": "Teclado inalámbrico compacto. Conectividad Wireless 2.4 GHz (10m alcance) con nano receptor Logitech Unifying. Incluye 2 baterías AAA.",
+        "color": "NEGRO",
+        "precio": 250.00 / 8, // Bs.250,00 / 8 = USD 31.25
+        "stock": 18,
+        "valor": 0,
+        "imagen": "/images/teclado-7.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 38,
+        "nombre": "Teclado LOGITECH KEYBOARD K120",
+        "modelo": "K120",
+        "marca": "Logitech",
+        "descripcion": "Teclado con cable USB, diseño resistente a salpicaduras. Teclas cóncavas y numérico. 51% de plástico reciclado. Ideal para oficina.",
+        "color": "NEGRO",
+        "precio": 119.00 / 8, // 119,00 Bs. / 8 = USD 14.875
+        "stock": 40,
+        "valor": 0,
+        "imagen": "/images/teclado-8.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 39,
+        "nombre": "Teclado Mecánico CORSAIR K70 CORE RGB",
+        "modelo": "K70 CORE RGB",
+        "marca": "Corsair",
+        "descripcion": "Teclado mecánico full-size con retroiluminación RGB por tecla. Interruptores Corsair MLX Red lineales. Chasis de aluminio, rueda multifunción y espuma interna. Cable USB-C a USB-A.",
+        "color": "NEGRO",
+        "precio": 800.90 / 8, // 800,90 bs / 8 = USD 100.1125
+        "stock": 7,
+        "valor": 0,
+        "imagen": "/images/teclado-9.jpg",
+        "categoria": "Teclados"
+    },
+    {
+        "id_producto": 40,
+        "nombre": "Teclado Mecánico CORSAIR K70 — CHERRY® MX Red",
+        "modelo": "K70 CHERRY MX Red",
+        "marca": "Corsair",
+        "descripcion": "Teclado mecánico con switches Cherry MX Red. Retroiluminación LED roja. Chasis de aluminio anodizado. 100% NKRO. Controles multimedia dedicados y reposamuñecas extraíble.",
+        "color": "NEGRO",
+        "precio": 1310.01 / 8,
+        "stock": 5,
+        "valor": 0,
+        "imagen": "/images/teclado-10.jpg",
+        "categoria": "Teclados"
+    }
 ];
+
 function formatPrice(price) {
-    // Usamos USD como moneda por el tipo de cambio del JSON
     return new Intl.NumberFormat('es-ES', {
         style: 'currency',
-        currency: 'USD', 
+        currency: 'BOB', 
         minimumFractionDigits: 2
     }).format(price);
 }
 
-// FUNCIÓN PRINCIPAL PARA RENDERIZAR LOS PRODUCTOS
+// FUNCIÓN PRINCIPAL PARA RENDERIZAR LOS PRODUCTOS USANDO BOOTSTRAP CARDS
 function renderizarProductos() {
     const productGrid = document.getElementById('product-grid');
     
-    // Si el contenedor no existe, salimos
     if (!productGrid) return; 
 
-    // Limpia el contenido estático que pudieras haber dejado en el HTML
     productGrid.innerHTML = ''; 
 
-    productos.forEach(producto => {
-        // 1. Crear el contenedor principal del producto
-        const item = document.createElement('div');
-        item.classList.add('product-item');
-        item.setAttribute('data-category', producto.categoria.toLowerCase());
-        item.setAttribute('data-id', producto.id_producto);
+    // Usaremos la clase 'row' de Bootstrap en el contenedor
+    productGrid.classList.add('row', 'g-4'); 
 
-        // 2. Crear el elemento de imagen
+    productos.forEach(producto => {
+        // 1. Contenedor de columna de Bootstrap para la responsividad
+        // col-12: 1 columna en móvil | col-sm-6: 2 columnas en sm | col-lg-4: 3 columnas en lg | col-xl-3: 4 columnas en xl
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col-12', 'col-sm-6', 'col-lg-4', 'col-xl-3');
+        colDiv.setAttribute('data-category', producto.categoria.toLowerCase());
+        colDiv.setAttribute('data-id', producto.id_producto);
+        
+        // 2. Elemento Card de Bootstrap
+        const card = document.createElement('div');
+        card.classList.add('card', 'h-100', 'product-card-custom'); // h-100 para que todas las cards tengan la misma altura
+
+        // 3. Imagen del producto
+        const imagePath = producto.imagen ? `${producto.imagen}` : 'images/placeholder.jpg'; 
         const img = document.createElement('img');
-        // Asegúrate de que las rutas sean correctas, si usas la ruta /images/... la imagen debe estar en esa carpeta.
-        const imagePath = producto.imagen ? `${producto.imagen}` : 'images/placeholder'; 
         img.src = imagePath; 
         img.alt = producto.nombre; 
-
-        // 3. Crear el elemento para la categoría
-        const categoryP = document.createElement('p');
-        categoryP.classList.add('category-text');
-        categoryP.textContent = producto.categoria;
-
-
-        // 4. Crear el elemento para el nombre (título)
-        const nameP = document.createElement('p');
-        nameP.classList.add('product-name');
-        nameP.textContent = producto.nombre;
-
-        // 5. Crear el elemento para el precio
-        const priceP = document.createElement('p');
-        priceP.classList.add('price');
-        priceP.textContent = formatPrice(producto.precio); 
-
-        // 6. Ensamblar todos los elementos dentro del item
-        item.appendChild(img);
-        item.appendChild(categoryP); 
-        item.appendChild(nameP);
-        item.appendChild(priceP);
+        img.classList.add('card-img-top', 'product-img-custom');
         
-        // 7. Agregar el producto al contenedor principal
-        productGrid.appendChild(item);
+        // 4. Contenido del cuerpo de la Card
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body', 'd-flex', 'flex-column');
+        
+        // 5. Categoría (usamos un small text)
+        const categorySmall = document.createElement('small');
+        categorySmall.classList.add('text-muted', 'card-category-custom');
+        categorySmall.textContent = producto.categoria;
+        
+        // 6. Nombre (título de la card)
+        const nameH5 = document.createElement('h5');
+        nameH5.classList.add('card-title', 'product-name-custom', 'mb-2');
+        nameH5.textContent = producto.nombre;
+
+        // 7. Descripción (opcional, solo el modelo)
+        const modelP = document.createElement('p');
+        modelP.classList.add('card-text', 'product-model-custom', 'text-truncate'); // text-truncate para evitar desbordamiento
+        modelP.textContent = `Modelo: ${producto.modelo}`;
+
+        // 8. Precio (destacado)
+        const priceDiv = document.createElement('div');
+        priceDiv.classList.add('mt-auto', 'pt-2'); // mt-auto empuja el precio y el botón hacia abajo
+        
+        const priceH4 = document.createElement('h4');
+        priceH4.classList.add('price-custom', 'text-primary'); // Clase Bootstrap y personalizada
+        priceH4.textContent = formatPrice(producto.precio);
+        priceDiv.appendChild(priceH4);
+
+        // 9. Botón de Detalles (MODIFICADO)
+        const detailsLink = document.createElement('a');
+        
+        // **Nueva URL para la página de detalles**
+        // Redirige a producto.html y adjunta el id_producto como parámetro de consulta
+        detailsLink.href = `producto.html?id=${producto.id_producto}`; 
+        
+        detailsLink.classList.add('btn', 'btn-info', 'w-100', 'btn-product-details'); // Cambiado a 'btn-info' para distinguirlo
+        detailsLink.textContent = 'Detalles'; // **Cambiado de 'Agregar al carrito' a 'Detalles'**
+        
+        // Ensamblar el cuerpo de la card
+        cardBody.appendChild(categorySmall); 
+        cardBody.appendChild(nameH5);
+        cardBody.appendChild(modelP);
+        cardBody.appendChild(priceDiv);
+        cardBody.appendChild(detailsLink); // Usamos el nuevo link de detalles
+        
+        // Ensamblar la card
+        card.appendChild(img);
+        card.appendChild(cardBody);
+        
+        // Ensamblar la columna
+        colDiv.appendChild(card);
+        
+        // Agregar la columna al grid
+        productGrid.appendChild(colDiv);
     });
 }
 
-// Ejecutar la función cuando el documento esté completamente cargado
 document.addEventListener('DOMContentLoaded', renderizarProductos);

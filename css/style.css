@@ -2,332 +2,438 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background: linear-gradient(#000000, #146C94);
+    color: #F6F1F1;
     line-height: 1.6;
 }
+
+/*colores*/
+:root {
+    --primary-color: #19A7CE;
+    --secondary-color: #146C94;
+    --text-color-light: #F6F1F1;
+    --text-color-dark: #333333;
+    --bg-dark: #000000;
+    --bg-nav: #FFFFFF;
+    --font-heading: 'Poppins', sans-serif;
+}
+
 /*header*/
-.navbar {
+.main-header {
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    position: relative;
-    z-index: 3;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9em;
-    text-transform: uppercase;
-}
-/*footer*/
-.main-footer {
-    background-color: #ffffff;
-    color: #333;
-    padding: 60px 40px;
-    position: relative;
-    border-top: 1px solid #eee;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.footer-column {
-    flex-basis: 25%;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.footer-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    color: #333;
-}
-
-/* --- Columna de Contacto --- */
-.contact-column p {
-    margin: 0 0 5px 0;
-}
-
-.contact-label {
-    font-weight: bold;
-    font-size: 0.9em;
-    margin-top: 15px !important;
-}
-
-.contact-detail {
-    font-size: 0.9em;
-    line-height: 1.5;
-}
-
-.footer-links-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links-list li {
-    margin-bottom: 5px;
-}
-
-.footer-link {
-    color: #333;
-    text-decoration: none;
-    font-size: 0.9em;
-    transition: color 0.2s;
-    line-height: 1.6;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-}
-
-.terms-link,
-.privacy-link {
-    color: #ff4500;
-}
-
-.terms-link:hover,
-.privacy-link:hover {
-    color: #e04000;
-}
-
-.newsletter-text {
-    font-size: 0.9em;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: #666;
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 250px;
-}
-
-.newsletter-input {
+    padding: 20px 50px;
     width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    font-size: 1em;
     box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.newsletter-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
-    width: fit-content;
-}
-
-.newsletter-button:hover {
-    background-color: #555;
-}
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .footer-column {
-        flex-basis: 100%;
-        padding: 0;
-    }
-    
-    .newsletter-form {
-        max-width: 100%;
-    }
-    
-    .newsletter-button {
-        width: 100%;
-    }
-    
-    .accessibility-icon {
-        left: 20px;
-        bottom: 10px;
-    }
-}
-/*index*/
-.hero-container {
-    position: relative;
-    min-height: 100vh;
+.logo {
     display: flex;
-    flex-direction: column;
-    background-image: url('/images/fondo2.png');
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
+    align-items: center;
+    color: var(--text-color-light);
 }
-.hero-container::before {
-    content: "";
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+.logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(25, 167, 206, 0.5); 
+}
+.main-nav {
+    background-color: var(--bg-nav);
+    border-radius: 50px; 
+    padding: 10px 25px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.main-nav li {
+    margin: 0 10px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.main-nav a:hover {
+    color: var(--primary-color);
+    background-color: rgba(25, 167, 206, 0.1);
+}
+.main-nav a.active {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(25, 167, 206, 0.5);
+}
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+.btn-custom-login {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--text-color-light) !important;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-custom-login:hover {
+    background-color: #1696b9 !important;
+    box-shadow: 0 4px 10px rgba(25, 167, 206, 0.6);
+    transform: translateY(-1px);
+}
+.btn-custom-register {
+    background-color: transparent !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.btn-custom-register:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color-light) !important;
+}
+
+/*index*/
+/*Carrusel*/
+/*hero*/
+.hero-split-section {
+    padding: 0;
+    /* Define una altura para la sección (ej. 60vh para que sea visible) */
+    min-height: 60vh; 
+}
+
+/* Asegura que el row no tenga gutters (espacios) */
+.hero-split-section .row {
+    height: 100%;
+    min-height: 60vh; /* Hereda la altura mínima */
+}
+
+/* Columna de la Imagen (Izquierda - Fondo Blanco) */
+.hero-image-col {
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container {
+    max-width: 80%; /* Limita el tamaño de la imagen dentro de la columna */
+    padding: 20px;
+}
+
+.sunglasses-image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+
+/* Columna del Contenido (Derecha - Fondo Negro) */
+.hero-content-col {
+    background-color: var(--bg-dark);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    padding: 50px 30px; /* Padding interno */
+}
+
+.content-wrapper {
+    max-width: 500px; /* Limita el ancho del texto para mejor lectura */
+    text-align: left;
+}
+
+/* Estilo del Título */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--text-color-light); /* Texto blanco */
+    margin-bottom: 0.5rem;
+}
+
+/* Línea de Separación */
+.title-divider {
+    border: 0;
+    height: 1px;
+    width: 250px; /* Ancho de la línea */
+    background-color: var(--text-color-light); /* Color de la línea */
+    opacity: 1; /* Asegura que la línea sea sólida */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    margin-left: 0; /* Alineada a la izquierda */
+}
+
+/* Estilo del Párrafo */
+.section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Estilo del Botón "Shop Now" */
+.shop-now-btn {
+    /* Mantiene el estilo outline-light de Bootstrap */
+    color: var(--text-color-light) !important;
+    border: 2px solid var(--text-color-light) !important;
+    background-color: transparent;
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: var(--text-color-light) !important;
+    color: var(--bg-dark) !important; /* Texto negro al pasar el ratón */
+}
+
+/* Media Query para móvil: apilamos las columnas y ajustamos el padding */
+@media (max-width: 768px) {
+    .hero-split-section .row {
+        min-height: auto;
+    }
+    .hero-image-col,
+    .hero-content-col {
+        min-height: 40vh; /* Altura más manejable en móvil */
+    }
+    .hero-content-col {
+        padding: 40px 20px;
+    }
+    .content-wrapper {
+        text-align: center;
+    }
+    .title-divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*Comentarios*/
+.section-title-testimonial {
+    font-size: 2.5rem;
+    color: var(--text-color-light);
+}
+.testimonial-card {
+    border: 1px solid #c9c9c9;
+    padding: 20px 30px; 
+    display: inline-block;
+    text-align: left;
+    background-color: var(--bg-light);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+}
+
+/* 3. Estilo de la Imagen de Perfil */
+.profile-image-container {
+    /* El tamaño del contenedor de la imagen */
+    width: 150px; 
+    height: 150px;
+    flex-shrink: 0; /* Evita que se encoja */
+    /* Crea la línea de la esquina izquierda del recuadro (el borde de la imagen en sí) */
+    border: 1px solid #c9c9c9; 
+    box-sizing: content-box;
+    margin-top: -20px; /* Sube la imagen un poco por encima del borde superior */
+    margin-left: -30px; /* Desplaza la imagen a la izquierda para que toque el borde */
+}
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.testimonial-content {
+    flex-grow: 1; 
+    padding-top: 10px;
+}
+.client-name {
+    color: var(--text-color-light);
+    font-size: 1.4rem;
+}
+.client-review {
+    color: var(--text-color-light);
+    line-height: 1.5;
+}
+.testimonial-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+.indicator {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.indicator.active {
+    background-color: var(--primary-color);
+}
+/*Contacto y mapa*/
+.contact-section {
+    position: relative;
+    /* Asegura que la sección cubra toda la altura de la vista */
+    min-height: 100vh; 
+    overflow: hidden;
+}
+
+#map-background {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
+    width: 100%;
     height: 100%;
-    z-index: 1;
 }
 
-.hero-content {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    position: relative;
-    z-index: 3;
-}
-
-.text-area {
-    max-width: 50%;
-    padding-bottom: 150px;
-}
-
-.main-title {
-    font-size: 4em;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-
-.body-text {
-    font-size: 1em;
-    margin-bottom: 30px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.buy-button {
-    display: inline-flex;
-    align-items: center;
-    color: #ff4500;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-    border: 2px solid transparent;
-    padding-right: 10px;
-}
-
-.buy-button span {
-    margin-left: 8px;
-    font-size: 1.5em;
-    line-height: 1;
-}
-.best-sellers-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #ffffff; 
-    color: #333; 
-}
-
-.section-title {
-    font-size: 2.5em;
-    font-weight: 800;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    color: #333; 
-}
-
-.product-list {
-    display: flex;
-    justify-content: center; 
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1300px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-}
-
-.product-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;flex-basis: calc(20% - 20px);
-    min-width: 150px;
-    padding: 10px 0;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px); 
-}
-
-.product-image-container {
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.product-image {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    object-fit: contain; 
-}
-
-.product-name {
-    font-size: 1em;
-    font-weight: normal;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.product-price {
-    font-size: 1.1em;
-    font-weight: 600;
-    color: #444; 
-}
-
-.show-more-button {
-    display: inline-flex;
-    align-items: center;
-    color: #ff4500;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
+.map-iframe {
+    width: 100%;
+    height: 100%;
     border: none;
+    /* Añade un filtro de color similar al de la imagen (verde/oscuro).
+        Ajusta los valores para que coincida con el tono deseado. 
+    */
+    filter: grayscale(100%) brightness(50%) sepia(80%) hue-rotate(120deg) contrast(150%);
+}
+
+/* 2. Estilos del Contenedor del Formulario (Centrado en la vista) */
+.form-overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Asegura que el formulario esté sobre el mapa */
+    /* El degradado de overlay en el fondo del mapa, si es necesario, 
+       pero en este caso el filtro del iframe ya oscurece el mapa. 
+    */
+}
+
+/* 3. Estilos de la Tarjeta del Formulario */
+.contact-form-card {
+    background-color: var(--bg-light);
+    padding: 40px;
+    border-radius: 5px;
+    /* Limita el ancho del formulario para que no ocupe todo */
+    max-width: 450px; 
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 4. Estilos de los Campos de Entrada (Input) */
+.custom-input {
+    border: none;
+    border-bottom: 1px solid #ccc; /* La línea delgada inferior */
+    border-radius: 0; /* Sin bordes redondeados */
     padding: 10px 0;
-    text-transform: uppercase;
+    background-color: transparent;
+    box-shadow: none !important; /* Quita sombras de Bootstrap */
+}
+
+.custom-input:focus {
+    border-color: #333; /* Color de línea al enfocar */
+}
+
+/* Asegurar que el placeholder sea visible con el estilo de línea */
+.custom-input::placeholder {
+    color: #999;
+}
+
+/* 5. Estilo del Botón "SEND" */
+.custom-send-btn {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* Ocupa todo el ancho */
+    width: 100%; 
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.custom-send-btn:hover {
+    background-color: #0099cc;
+}
+
+
+/* Footer */
+.bg-dark {
+    background-color: #000000 !important; 
+}
+.text-primary {
+    color: #19A7CE !important; 
     letter-spacing: 1px;
+    border-bottom: 2px solid #19A7CE;
+    padding-bottom: 5px;
 }
-
-.show-more-button span {
-    margin-left: 8px;
-    font-size: 1.5em;
-    line-height: 1;
-    transition: margin-left 0.3s ease;
+.text-white:hover, 
+.list-unstyled a:hover {
+    color: #19A7CE !important;
+    transition: color 0.3s ease-in-out;
 }
-
-.show-more-button:hover span {
-    margin-left: 12px;
+.text-muted, 
+.text-secondary {
+    color: #F6F1F1 !important;
+}
+.form-control.bg-secondary {
+    background-color: rgba(128, 128, 128, 0.1) !important;
+    border: 1px solid #19A7CE;
+}
+.btn-primary {
+    background-color: #19A7CE;
+    border-color: #19A7CE;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #146C94;
+    border-color: #146C94;
+}
+hr {
+    border-top: 1px solid rgba(122, 122, 122, 0.1);
+}
+.text-md-end a {
+    font-size: 1.25rem;
+    transition: transform 0.2s ease-in-out;
+}
+.text-md-end a:hover {
+    transform: translateY(-2px);
+    color: #19A7CE !important;
 }
