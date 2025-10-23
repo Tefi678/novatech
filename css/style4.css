@@ -116,3 +116,27 @@ body {
     background-color: var(--primary-color) !important;
     color: var(--text-color-light) !important;
 }
+/*nova*/
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(''); /* Reemplaza con una imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.vision-card {
+    transition: transform 0.3s ease;
+}
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.team-member-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #007bff; /* Color primario de Bootstrap */
+    padding: 2px;
+}

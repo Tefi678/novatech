@@ -116,3 +116,38 @@ body {
     background-color: var(--primary-color) !important;
     color: var(--text-color-light) !important;
 }
+/*cesta*/
+.card-details-bg {
+    background-color: #0000ff; /* Un azul más oscuro y vibrante como en la imagen */
+    color: white;
+}
+
+/* Estilo para los inputs en el fondo azul, replicando el diseño */
+.card-details-bg .form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo del input ligeramente transparente/oscuro */
+    border: none;
+    color: white;
+}
+
+.card-details-bg .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilo para los detalles del artículo del carrito */
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para la imagen del producto (ajustar si es necesario) */
+.product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}

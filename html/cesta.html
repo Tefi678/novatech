@@ -10,7 +10,160 @@
     </head>
 <body>
     <div id="header-placeholder"></div>
-    
+    <div class="container my-5">
+        <div class="row">
+
+            <div class="col-md-7">
+                <div class="mb-4">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <i class="bi bi-arrow-left"></i> Continue Shopping
+                    </a>
+                </div>
+
+                <h3 class="mb-3">Shopping cart</h3>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="mb-0 text-muted">You have 4 items in your cart</p>
+                    <div class="d-flex align-items-center">
+                        <span class="text-muted me-2">Sort by:</span>
+                        <a href="#" class="text-dark text-decoration-none">
+                            **price** <i class="bi bi-chevron-down small"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="list-group list-group-flush">
+                    <div class="d-flex cart-item align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://via.placeholder.com/60x60/343a40/ffffff?text=iPhone" alt="iPhone 11 pro" class="product-img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">**Iphone 11 pro**</h6>
+                            <small class="text-muted">256GB, Navy Blue</small>
+                        </div>
+                        <div class="d-flex align-items-center me-4">
+                            <span class="me-3">2</span>
+                            <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
+                        </div>
+                        <div>
+                            <span class="fw-bold">$900</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex cart-item align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://via.placeholder.com/60x60/343a40/ffffff?text=OnePro" alt="One Pro 7T" class="product-img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">**One pro 7T**</h6>
+                            <small class="text-muted">256GB, Navy Blue</small>
+                        </div>
+                        <div class="d-flex align-items-center me-4">
+                            <span class="me-3">2</span>
+                            <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
+                        </div>
+                        <div>
+                            <span class="fw-bold">$900</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex cart-item align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://via.placeholder.com/60x60/343a40/ffffff?text=Pixel" alt="Google pixel 4 XL" class="product-img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">**Google pixel 4 XL**</h6>
+                            <small class="text-muted">256GB, Axe black</small>
+                        </div>
+                        <div class="d-flex align-items-center me-4">
+                            <span class="me-3">1</span>
+                            <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
+                        </div>
+                        <div>
+                            <span class="fw-bold">$800</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex cart-item align-items-center">
+                        <div class="flex-shrink-0 me-3">
+                            <img src="https://via.placeholder.com/60x60/343a40/ffffff?text=Samsung" alt="Samsung galaxy Note 10" class="product-img">
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0">**Samsung galaxy Note 10**</h6>
+                            <small class="text-muted">256GB, Navy Blue</small>
+                        </div>
+                        <div class="d-flex align-items-center me-4">
+                            <span class="me-3">1</span>
+                            <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>
+                        </div>
+                        <div>
+                            <span class="fw-bold">$999</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="col-md-5">
+                <div class="card card-details-bg border-0">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="card-title mb-0">**Card details**</h4>
+                            <img src="https://via.placeholder.com/40x40/ffffff/000000?text=👤" alt="User Avatar" class="rounded-circle">
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="mb-2 small">Card type</p>
+                            <div class="d-flex justify-content-start gap-2">
+                                <img src="https://via.placeholder.com/40x25/f8f9fa/000000?text=VISA" alt="VISA" class="rounded">
+                                <img src="https://via.placeholder.com/40x25/f8f9fa/000000?text=MAST" alt="MasterCard" class="rounded">
+                                <img src="https://via.placeholder.com/40x25/f8f9fa/000000?text=AMEX" alt="Amex" class="rounded">
+                                <img src="https://via.placeholder.com/40x25/f8f9fa/000000?text=PayPal" alt="PayPal" class="rounded">
+                            </div>
+                        </div>
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="nameOnCard" class="form-label small">Name on card</label>
+                                <input type="text" class="form-control" id="nameOnCard" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cardNumber" class="form-label small">Card number</label>
+                                <input type="text" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000">
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-6">
+                                    <label for="expiryDate" class="form-label small">Date</label>
+                                    <input type="text" class="form-control" id="expiryDate" placeholder="12/24">
+                                </div>
+                                <div class="col-6">
+                                    <label for="cvv" class="form-label small">CVV</label>
+                                    <input type="text" class="form-control" id="cvv" placeholder="342">
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small">Subtotal</span>
+                                <span class="small">$3000.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small">Shipping</span>
+                                <span class="small">$20.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="fw-bold">Total (incl. taxes)</span>
+                                <span class="fw-bold">$3020.00</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning w-100 py-3 fw-bold text-dark rounded-3" style="background-color: #007bff; color: white !important;">
+                                <span class="fs-5">**$3020.00**</span> **Checkout** <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div id="footer-placeholder"></div>
     <script src="/scripts/script5.js"></script>
 </body>

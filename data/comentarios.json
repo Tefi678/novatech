@@ -1,0 +1,44 @@
+{
+    "comentarios": [
+        {
+            "id_comentario": 1,
+            "nombre": "Estefania",
+            "email": "45tifany.trabajo@gmail.com",
+            "contenido": "¡Excelente servicio! Muy satisfecha con la atención recibida.",
+            "calificación": 4.5,
+            "foto": "/images/user-1.jpg"
+        },
+        {
+            "id_comentario": 2,
+            "nombre": "Ricardo",
+            "email": "ricardo.gomez@hotmail.com",
+            "contenido": "El producto superó mis expectativas. Lo recomiendo totalmente.",
+            "calificación": 5.0,
+            "foto": "/images/user-2.jpg"
+        },
+        {
+            "id_comentario": 3,
+            "nombre": "Ana Luisa",
+            "email": "analuisa.perez@yahoo.es",
+            "contenido": "Podría mejorar la velocidad de entrega, pero el artículo es de buena calidad.",
+            "calificación": 3.5,
+            "foto": "/images/user-3.jpg"
+        },
+        {
+            "id_comentario": 4,
+            "nombre": "Javier",
+            "email": "javier.m99@gmail.com",
+            "contenido": "Muy buena experiencia en general. El personal fue muy amable.",
+            "calificación": 4.0,
+            "foto": "/images/user-4.jpg"
+        },
+        {
+            "id_comentario": 5,
+            "nombre": "Sofia",
+            "email": "sofia.r@outlook.com",
+            "contenido": "Contenta con la compra, el proceso fue sencillo y rápido.",
+            "calificación": 4.5,
+            "foto": "/images/user-5.jpg"
+        }
+    ]
+}
