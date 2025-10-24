@@ -117,37 +117,77 @@ body {
     color: var(--text-color-light) !important;
 }
 /*cesta*/
-.card-details-bg {
-    background-color: #0000ff; /* Un azul más oscuro y vibrante como en la imagen */
-    color: white;
+/* Estilos generales */
+body {
+    background-color: #f8f9fa; /* Fondo claro de Bootstrap */
 }
 
-/* Estilo para los inputs en el fondo azul, replicando el diseño */
-.card-details-bg .form-control {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo del input ligeramente transparente/oscuro */
-    border: none;
-    color: white;
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.card-details-bg .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Estilo para los detalles del artículo del carrito */
+/* Estilo para los ítems del carrito */
 .cart-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
     padding-top: 15px;
+    padding-bottom: 15px;
+    transition: background-color 0.2s ease;
 }
 
-.cart-item:last-child {
-    border-bottom: none;
+.cart-item:hover {
+    background-color: #f1f1f1;
 }
 
-/* Estilo para la imagen del producto (ajustar si es necesario) */
 .product-img {
     width: 60px;
     height: 60px;
     object-fit: cover;
-    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+/* Estilo para la tarjeta de resumen */
+.card-details-bg {
+    /* Un color de fondo ligeramente diferente para destacar el resumen */
+    background-color: #ffffff; 
+    border-radius: 1rem;
+    position: sticky; /* Fija el resumen en el lateral */
+    top: 20px;
+}
+
+/* Inputs de formulario dentro del checkout */
+#checkout-form .form-control {
+    border-radius: 0.5rem;
+}
+
+/* Botón de Checkout */
+#checkout-btn {
+    /* El color de fondo se controla por JS para el estado activo/inactivo */
+    color: white !important;
+    border: none;
+    border-radius: 0.75rem;
+}
+
+#checkout-btn:disabled {
+    background-color: #6c757d !important;
+}
+
+/* Estilo para los checkboxes de selección de producto */
+.product-select-checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.header {
+    font-family: var(--font-heading);
+    font-size: 3rem; 
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color); 
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }

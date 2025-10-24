@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novatech - Carrito</title>
+    <link rel="icon" type="image/png" href="/images/logo-n.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style5.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <header class="header">CARRITO</header>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-7">
+
+                <h3 class="mb-3">Tu Carrito de Compras</h3>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="mb-0 text-muted"><span id="item-count">0</span> artículos en tu carrito</p>
+                </div>
+
+                <div id="cart-items-container" class="list-group list-group-flush">
+                    <div id="empty-cart-message" class="text-center p-5 border rounded" style="display: none;">
+                        <i class="bi bi-bag-x display-4 text-muted"></i>
+                        <p class="mt-3 fs-5">Tu carrito está vacía.</p>
+                        <a href="tienda.html" class="btn btn-primary">Ver Productos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card card-details-bg border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4 border-bottom pb-2">Checkout y Pago</h4>
+
+                        <form id="checkout-form">
+                            <h5 class="mt-4 mb-3">Datos de Contacto</h5>
+                            <div class="mb-3">
+                                <label for="checkoutName" class="form-label small">Nombre Completo</label>
+                                <input type="text" class="form-control" id="checkoutName" placeholder="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="checkoutEmail" class="form-label small">Email (Para recibir tu factura y seguimiento)</label>
+                                <input type="email" class="form-control" id="checkoutEmail" placeholder="correo" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="checkoutPhone" class="form-label small">Número de Teléfono</label>
+                                <input type="tel" class="form-control" id="checkoutPhone" placeholder="Ej: 7xxxxxxx" required>
+                            </div>
+                            
+                            <h5 class="mt-4 mb-3 border-top pt-3">Resumen de la Orden</h5>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small">Subtotal (<span id="summary-item-count">0</span> art. sel.)</span>
+                                <span class="small" id="summary-subtotal">0.00 BOB</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="small">Envío</span>
+                                <span class="small" id="summary-shipping">0.00 BOB</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4 border-top pt-2">
+                                <span class="fw-bold fs-5">Total a Pagar</span>
+                                <span class="fw-bold fs-5 text-primary" id="summary-total">0.00 BOB</span>
+                            </div>
+
+                            <h5 class="mt-4 mb-3">Paga con QR Simple</h5>
+                            <div id="qr-display-area" class="text-center p-3 mb-4 border rounded" style="background-color: #f1f1f1;">
+                                <p class="text-muted mb-1">Escanea el QR para transferir:</p>
+                                <h4 class="fw-bold text-primary" id="qr-amount-display">0.00 BOB</h4>
+                                <img id="qr-code-img" src="https://via.placeholder.com/200x200/28a745/ffffff?text=QR+PAGO" alt="Código QR de Pago" class="img-fluid my-2" style="max-width: 150px;">
+                                <p class="small text-danger mt-1">IMPORTANTE: El QR es una simulación. Confirma tu pedido abajo.</p>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-success w-100 py-3 fw-bold rounded-3" id="checkout-btn" disabled>
+                                <span class="fs-5">CONFIRMAR PEDIDO</span> <i class="bi bi-send-check"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-y0N/0k+i/2B1X+5aQWp8uJ/gL7kQ1b4qMv3pG7vW7T0pL4fFfRjFqJg9qV5hLd" crossorigin="anonymous"></script>
+    <script src="/scripts/script5.js"></script>
+</body>
+</html>

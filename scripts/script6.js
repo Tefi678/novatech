@@ -1,12 +1,61 @@
-let productos = []; 
+// Carga Header y Footer (Mantener esta parte)
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    });
 
-// Función para obtener el parámetro de la URL
-function getProductIdFromUrl() {
-    const params = new URLSearchParams(window.location.search);
-    return parseInt(params.get('id'), 10);
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+    });
+
+// --- Lógica del Carrito ---
+
+/**
+ * Obtiene el carrito de localStorage o inicializa uno vacío.
+ * @returns {Array} Lista de productos en el carrito.
+ */
+function getCart() {
+    const cart = localStorage.getItem('novatechCart');
+    return cart ? JSON.parse(cart) : [];
 }
 
-// Función para formatear el precio
+/**
+ * Guarda el carrito en localStorage.
+ * @param {Array} cart - Lista de productos.
+ */
+function saveCart(cart) {
+    localStorage.setItem('novatechCart', JSON.stringify(cart));
+}
+
+/**
+ * Añade un producto al carrito o incrementa su cantidad.
+ * @param {Object} producto - El objeto producto a añadir.
+ */
+function addToCart(producto) {
+    const cart = getCart();
+    const existingItem = cart.find(item => item.id_producto === producto.id_producto);
+
+    if (existingItem) {
+        existingItem.cantidad += 1;
+    } else {
+        // Clonamos el producto y añadimos la propiedad cantidad y selected (para la cesta)
+        cart.push({...producto, cantidad: 1, selected: true}); 
+    }
+
+    saveCart(cart);
+    alert(`"${producto.nombre}" ha sido añadido a la cesta.`);
+}
+
+// --- Lógica de Carga y Renderizado del Producto (Ajustada para añadir evento) ---
+
+function getProductIdFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+}
+
 function formatPrice(price) {
     return new Intl.NumberFormat('es-ES', {
         style: 'currency',
@@ -15,231 +64,77 @@ function formatPrice(price) {
     }).format(price);
 }
 
-// Función principal para cargar y renderizar el producto
-function loadProductDetails() {
-    // **NOTA:** 'productos' ahora es el array de objetos gracias a la corrección en el fetch
-    const productId = getProductIdFromUrl();
-    // Usa find() en el array
-    const product = productos.find(p => p.id_producto === productId);
+function generateRatingStars(rating) {
+    let starsHtml = '';
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
 
-    const container = document.querySelector('.product-container');
-    
-    if (!product) {
-        if (container) {
-            container.innerHTML = '<div class="error-message">Producto no encontrado. Verifique el ID o la carga del inventario.</div>';
+    for (let i = 0; i < 5; i++) {
+        if (i < fullStars) {
+            starsHtml += '<i class="fas fa-star text-warning me-1"></i>'; 
+        } else if (i === fullStars && hasHalfStar) {
+            starsHtml += '<i class="fas fa-star-half-alt text-warning me-1"></i>'; 
+        } else {
+            starsHtml += '<i class="far fa-star text-warning me-1"></i>'; 
         }
-        return;
     }
-
-    // --- Inyectar los detalles en el HTML (Lógica ya revisada y OK) ---
-    const imageContainer = document.querySelector('.product-image');
-    const imageElement = imageContainer.querySelector('img');
-    imageElement.src = product.imagen.startsWith('/') ? product.imagen : `/${product.imagen}`;
-    imageElement.alt = product.nombre;
-
-    const detailsContainer = document.querySelector('.product-details');
-    detailsContainer.querySelector('h1').textContent = product.nombre;
-    
-    let modelH2 = detailsContainer.querySelector('h2');
-    if (!modelH2) {
-        modelH2 = document.createElement('h2');
-        detailsContainer.insertBefore(modelH2, detailsContainer.querySelector('p'));
-    }
-    modelH2.textContent = `${product.marca} - Modelo: ${product.modelo}`;
-
-    detailsContainer.querySelector('p').textContent = product.descripcion;
-    
-    let infoBox = document.getElementById('product-info-box');
-    if (!infoBox) {
-        infoBox = document.createElement('div');
-        infoBox.id = 'product-info-box';
-        infoBox.classList.add('info-box');
-        detailsContainer.insertBefore(infoBox, detailsContainer.querySelector('.price'));
-    }
-    infoBox.innerHTML = `
-        <span>Categoría: ${product.categoria}</span>
-        <span>Color: ${product.color}</span>
-    `;
-    
-    let stockStatus = detailsContainer.querySelector('.stock-status');
-    if (stockStatus) stockStatus.remove();
-
-    stockStatus = document.createElement('div');
-    stockStatus.classList.add('stock-status');
-    detailsContainer.insertBefore(stockStatus, detailsContainer.querySelector('.price'));
-    
-    const addToCartBtn = document.querySelector('.add-to-cart-btn');
-
-    if (product.stock > 0) {
-        stockStatus.textContent = `En stock: ${product.stock} unidades`;
-        stockStatus.classList.add('in-stock');
-        stockStatus.classList.remove('out-of-stock');
-        if (addToCartBtn) addToCartBtn.style.display = 'inline-flex';
-    } else {
-        stockStatus.textContent = 'Agotado temporalmente';
-        stockStatus.classList.add('out-of-stock');
-        stockStatus.classList.remove('in-stock');
-        if (addToCartBtn) addToCartBtn.style.display = 'none';
-    }
-
-    detailsContainer.querySelector('.price').textContent = formatPrice(product.precio);
+    return starsHtml;
 }
 
-// Función para mostrar el formulario de compra
-function showCheckoutForm(e) {
-    e.preventDefault();
-    const checkoutForm = document.getElementById('checkout-form');
+function setupAddToCartButton(producto) {
     const addToCartBtn = document.querySelector('.add-to-cart-btn');
-    
-    if (checkoutForm.style.display === 'block') {
-        checkoutForm.style.display = 'none';
+    if (producto.stock > 0) {
+        addToCartBtn.disabled = false;
         addToCartBtn.textContent = 'Añadir a la cesta';
+        // Añadir el evento click al botón
+        addToCartBtn.addEventListener('click', () => addToCart(producto));
     } else {
-        checkoutForm.style.display = 'block';
-        addToCartBtn.textContent = 'Ocultar Formulario';
+        addToCartBtn.disabled = true;
+        addToCartBtn.textContent = 'AGOTADO';
     }
 }
 
-// Función para validar y procesar el formulario
-function handlePurchase(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const feedback = document.getElementById('feedback-message');
-    
-    // 1. Validación básica de campos
-    const email = form.email.value;
-    const address = form.address.value;
-    const cardNumber = form['card-number'].value.replace(/\s/g, '');
-    const cvv = form.cvv.value;
-    
-    if (!email || !address || cardNumber.length !== 16 || cvv.length !== 3) {
-        feedback.textContent = 'Por favor, complete todos los campos correctamente. El número de tarjeta debe tener 16 dígitos y el CVV 3.';
-        feedback.classList.remove('success');
-        feedback.classList.add('error');
-        feedback.style.display = 'block';
+function renderProductDetails(producto) {
+    if (!producto) {
+        // ... (código para producto no encontrado) ...
         return;
     }
-    
-    // 2. Simulación de la compra
-    feedback.textContent = 'Procesando pago...';
-    feedback.classList.remove('error');
-    feedback.classList.add('success');
-    feedback.style.display = 'block';
 
-    setTimeout(() => {
-        feedback.textContent = '¡Compra exitosa! Su pedido ha sido procesado.';
-        feedback.classList.remove('error');
-        feedback.classList.add('success');
-        
-        form.reset();
-        
-        document.getElementById('checkout-form').style.display = 'none';
-        document.querySelector('.add-to-cart-btn').textContent = 'Añadir a la cesta';
-        
-        // Simular reducción de stock y re-renderizar
-        const productId = getProductIdFromUrl();
-        const product = productos.find(p => p.id_producto === productId);
-        if (product) {
-            product.stock -= 1;
-            loadProductDetails();
-        }
+    // ... (código para renderizar detalles) ...
+    document.getElementById('product-page-title').textContent = `${producto.nombre} - Novatech`;
+    document.getElementById('product-image').src = producto.imagen || '/images/placeholder.jpg';
+    document.getElementById('product-category').textContent = producto.categoria;
+    document.getElementById('product-brand').textContent = producto.marca;
+    document.getElementById('product-name').textContent = producto.nombre;
+    document.getElementById('product-model').textContent = producto.modelo;
+    document.getElementById('product-color').textContent = producto.color;
+    document.getElementById('product-description').textContent = producto.descripcion;
+    document.getElementById('product-price').textContent = formatPrice(producto.precio);
+    document.getElementById('product-stock').textContent = producto.stock > 0 ? `Stock: ${producto.stock} unidades` : 'AGOTADO';
+    document.getElementById('product-rating').innerHTML = generateRatingStars(producto.valor);
 
-    }, 2000);
+    // Configurar el botón de añadir a la cesta
+    setupAddToCartButton(producto); 
 }
 
-
-// --- DOMContentLoaded ---
-document.addEventListener('DOMContentLoaded', () => {
+async function loadProduct() {
+    const productId = getProductIdFromUrl();
     
-    // 0. Cargar Header (simulación)
-    fetch('header.html').then(response => response.text()).then(data => {
-        const headerPlaceholder = document.getElementById('header-placeholder');
-        if (headerPlaceholder) {
-            headerPlaceholder.innerHTML = data;
-        }
-    });
-    
-    // 1. Añadir el formulario de compra dinámicamente
-    const detailsContainer = document.querySelector('.product-details');
-    if (detailsContainer) {
-        detailsContainer.insertAdjacentHTML('beforeend', `
-            <div id="checkout-form" class="checkout-form" style="display:none;">
-                <h3>Finalizar Compra</h3>
-                <form id="purchase-form">
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Dirección de Envío:</label>
-                        <input type="text" id="address" name="address" required>
-                    </div>
-                    
-                    <h4>Detalles de Pago (Simulación)</h4>
-                    <div class="form-group">
-                        <label for="card-number">Número de Tarjeta (16 dígitos):</label>
-                        <input type="text" id="card-number" name="card-number" pattern="[0-9]{16}" maxlength="16" required>
-                    </div>
-                    
-                    <div class="grid-2">
-                        <div class="form-group">
-                            <label for="exp-month">Mes Exp:</label>
-                            <input type="text" id="exp-month" name="exp-month" pattern="(0[1-9]|1[0-2])" maxlength="2" placeholder="MM" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exp-year">Año Exp:</label>
-                            <input type="text" id="exp-year" name="exp-year" pattern="[0-9]{4}" maxlength="4" placeholder="AAAA" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="cvv">CVV:</label>
-                        <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" maxlength="3" required>
-                    </div>
-
-                    <button type="submit" class="btn-purchase">Pagar Ahora</button>
-                    <div id="feedback-message" class="feedback-message" style="display:none;"></div>
-                </form>
-            </div>
-        `);
-
-        // Configurar el manejador del formulario de compra
-        const purchaseForm = document.getElementById('purchase-form');
-        if (purchaseForm) {
-            purchaseForm.addEventListener('submit', handlePurchase);
-        }
+    if (!productId) {
+        renderProductDetails(null); 
+        return;
     }
-    
-    // 2. Cargar el inventario (fetch) y luego cargar los detalles del producto
-    const jsonFilePath = './data/inventario.json'; // Ruta asumida como correcta
 
-    fetch(jsonFilePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Error al cargar el inventario: ${response.status} ${response.statusText}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            // *** CORRECCIÓN CRÍTICA AQUÍ ***
-            // Rellenar la variable global 'productos' con el ARRAY DENTRO de la clave 'productos'
-            productos = data.productos; 
-            
-            // Una vez que los datos están cargados, renderizar los detalles
-            loadProductDetails();
-            
-            // Configurar el evento del botón Añadir a la Cesta
-            const addToCartBtn = document.querySelector('.add-to-cart-btn');
-            if (addToCartBtn) {
-                addToCartBtn.addEventListener('click', showCheckoutForm);
-            }
-        })
-        .catch(error => {
-            console.error("Error fatal al cargar o procesar el inventario:", error);
-            const container = document.querySelector('.product-container');
-            if (container) {
-                container.innerHTML = `<div class="error-message">Error: No se pudo cargar la información del inventario. (${error.message})</div>`;
-            }
-        });
-});
+    try {
+        const response = await fetch('/data/inventario.json');
+        const data = await response.json();
+        const producto = data.productos.find(p => p.id_producto === parseInt(productId));
+        
+        renderProductDetails(producto);
+
+    } catch (error) {
+        console.error('Error al cargar los detalles del producto:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadProduct);

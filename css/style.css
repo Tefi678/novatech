@@ -75,7 +75,7 @@ body {
 }
 .main-nav a:hover {
     color: var(--primary-color);
-    background-color: rgba(25, 167, 206, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .main-nav a.active {
     color: var(--text-color-light);
@@ -83,56 +83,65 @@ body {
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(25, 167, 206, 0.5);
 }
-.user-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 20px;
-}
-.btn-custom-login {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-    color: var(--text-color-light) !important;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 25px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.btn-custom-login:hover {
-    background-color: #1696b9 !important;
-    box-shadow: 0 4px 10px rgba(25, 167, 206, 0.6);
-    transform: translateY(-1px);
-}
-.btn-custom-register {
-    background-color: transparent !important;
-    border: 2px solid var(--primary-color) !important;
-    color: var(--primary-color) !important;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 25px;
-    transition: background-color 0.2s, color 0.2s;
-}
-.btn-custom-register:hover {
-    background-color: var(--primary-color) !important;
-    color: var(--text-color-light) !important;
-}
 
 /*index*/
 /*Carrusel*/
+/*index*/
+/*Carrusel - CORREGIDO PARA CENTRADO ABSOLUTO Y TAMAÑO FIJO */
+#mainCarousel {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Establece la altura fija para el carrusel */
+.carousel-inner {
+    height: 550px; 
+    max-height: 550px;
+    overflow: hidden; 
+    text-align: center; /* Centra la imagen horizontalmente (si es display: block) */
+}
+
+/* Cada slide necesita posición relativa para que la imagen se centre absolutamente dentro */
+.carousel-inner .carousel-item {
+    height: 100%; 
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: relative; /* Clave para que la imagen se posicione respecto a este contenedor */
+}
+
+/* La imagen: se ajusta, no se corta y se centra perfectamente */
+.carousel-inner .carousel-item img {
+    max-height: 100%; 
+    max-width: 100%; 
+    
+    object-fit: contain; /* Se ajusta por completo, sin cortarse */
+    
+    /* Centrado Mágico de CSS (Funciona con la posición relativa del padre) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* El siguiente bloque es solo para asegurar que Bootstrap no interfiera */
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-inner, .carousel-inner .carousel-item {
+        height: 300px; 
+        max-height: 300px; 
+    }
+}
 /*hero*/
 .hero-split-section {
     padding: 0;
-    /* Define una altura para la sección (ej. 60vh para que sea visible) */
     min-height: 60vh; 
 }
-
-/* Asegura que el row no tenga gutters (espacios) */
 .hero-split-section .row {
     height: 100%;
-    min-height: 60vh; /* Hereda la altura mínima */
+    min-height: 60vh;
 }
-
-/* Columna de la Imagen (Izquierda - Fondo Blanco) */
 .hero-image-col {
     background-color: var(--bg-light);
     display: flex;
@@ -140,35 +149,27 @@ body {
     align-items: center;
     padding: 20px;
 }
-
 .image-container {
-    max-width: 80%; /* Limita el tamaño de la imagen dentro de la columna */
+    max-width: 80%;
     padding: 20px;
 }
-
-.sunglasses-image {
+.compu-image {
     display: block;
     height: auto;
     width: 100%;
 }
-
-
-/* Columna del Contenido (Derecha - Fondo Negro) */
 .hero-content-col {
     background-color: var(--bg-dark);
     color: var(--text-color-light);
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    padding: 50px 30px; /* Padding interno */
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
 }
-
 .content-wrapper {
     max-width: 500px; /* Limita el ancho del texto para mejor lectura */
     text-align: left;
 }
-
-/* Estilo del Título */
 .section-title {
     font-size: 2.5rem;
     font-weight: 900;
